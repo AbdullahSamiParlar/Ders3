@@ -24,6 +24,6 @@ async def on_message(message):
     elif message.content.startswith('/bye'):
         await message.channel.send("See you later!")
     else:
-        await message.channel.send(message.content)
+        return
 
 client.run("TOKEN")
