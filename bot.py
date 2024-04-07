@@ -16,13 +16,9 @@ async def on_ready():
 async def on_message(message):
     if message.author == client.user:
         return
-    if message.content.startswith('/merhaba'):
-        await message.channel.send("Selam!")
     if message.content.startswith('/şifreoluştur-'):
         a = message.content.replace("/şifreoluştur-", "")
         await message.channel.send(gen_pass(int(a)))
-    elif message.content.startswith('/bye'):
-        await message.channel.send("See you later!")
     else:
         return
 
